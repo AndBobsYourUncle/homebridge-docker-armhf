@@ -1,6 +1,6 @@
 # Homebridge docker image for Raspberry Pi
 
-This is my packaging of [Homebridge](https://github.com/nfarina/homebridge) with [MiLight plugin](https://github.com/dotsam/homebridge-milight) in a Docker image that I run on my Raspberry Pi home server.
+This is my packaging of [Homebridge](https://github.com/nfarina/homebridge) with [HomeAssistant](https://github.com/home-assistant/homebridge-homeassistant) in a Docker image that I run on my Raspberry Pi home server.
 
 ## Building the image
 ```
