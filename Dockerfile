@@ -1,8 +1,7 @@
-from hypriot/rpi-node:6.9.4
+FROM hypriot/rpi-node:6.9.4
 RUN apt-get update && apt-get install -y libavahi-compat-libdnssd-dev
 RUN npm i -g  --unsafe-perm homebridge
-RUN npm i -g homebridge-milight
-COPY config.json /root/.homebridge/config.json
+RUN npm i -g homebridge-homeassistant
 COPY run.sh /root/
 RUN chmod +x /root/run.sh
 CMD ["/root/run.sh"]
@@ -15,3 +14,5 @@ ENV LC_ALL en_US.UTF-8
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
+
+COPY config.json /root/.homebridge/config.json

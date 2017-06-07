@@ -1,24 +1,32 @@
 {
-"bridge": {
-        "name": "Homebridge",
-        "username": "CA:21:3D:E3:CE:30",
-        "port": 51826,
-        "pin": "031-45-154"
-    },
-"platforms": [
-        {
-            "platform":"MiLight",
-            "name":"MiLight",
-            "bridges": [
-              {
-                "ip_address": "10.0.1.25",
-                "version": "v2",
-                "lights": {
-                           "rgbw": ["Living Room"]},
-                "repeat": 1,
-                "delay": 100
-              }
-            ]
-        }
-]
+   "bridge":{
+      "name":"Homebridge",
+      "username":"CA:21:3D:E3:CE:30",
+      "port":51826,
+      "pin":"031-45-154"
+   },
+   "platforms":[
+      {
+         "platform":"HomeAssistant",
+         "name":"HomeAssistant",
+         "host":"HOME_ASSISTANT_URL",
+         "password":"HOME_ASSISTANT_PASSWORD",
+         "supported_types":[
+            "binary_sensor",
+            "climate",
+            "cover",
+            "device_tracker",
+            "fan",
+            "group",
+            "input_boolean",
+            "light",
+            "lock",
+            "media_player",
+            "scene",
+            "sensor",
+            "switch"
+         ],
+         "logging":true
+      }
+   ]
 }
